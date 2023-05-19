@@ -1,7 +1,6 @@
 .container {
     width: 100%;
     height: 60vh;
-    background: #9edfe0;
     border-radius: 30px;
     overflow: hidden;
   }
@@ -34,7 +33,7 @@
 
   
 
-@keyframes scroller {
+/* @keyframes scroller {
     0% {
       transform: translateX(0);
     }
@@ -42,7 +41,7 @@
       transform: translateX( calc(-460px * 3) );
     }
   }
-  
+   */
   
 .square{
     margin-top: 100px;
@@ -53,45 +52,27 @@
     background-color: rgb(0, 119, 255);
 }
 
-.walk{
-    animation: walk 1s ease-in-out infinite;
-}
-
-@keyframes walk{
-    0%{
-        transform:rotate(0deg);
-    }
-
-    65%{
-        transform: rotate(85deg);
-    }
-
-    75%{
-        transform:rotate(90deg);
-    }
-
-    83%{
-        transform: rotate(88deg);
-    }
-    90%,
-    100%{
-        transform:rotate(90deg);
-    }
-}
-
-
-div.at-container {
-    margin-top: -15%;
-    margin-left: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
 .at-item {
-    width: 100px; height: 100px; background-color:rgb(0, 119, 255); 
+    margin-top: 50px;
+    margin-left: 300px;
+    width: 100px;
+    height: 100px;
+    background-color:rgb(0, 119, 255); 
     border-radius: 20px;
-    animation:rotate-bl 2s ease-in-out infinite
+    animation:rotate-bl 2s ease-in-out  infinite alternate;
+        
+    /* shorthand
+    animation: rotate-bl 1s linear 0s 1 normal none;*/
+}
+
+.at-item1 {
+    margin-top: -25%;
+    margin-left: 125px;
+    width: 100px;
+    height: 100px;
+    background-color:rgb(0, 119, 255); 
+    border-radius: 20px;
+    animation:rotate-bl1 2s ease-in-out infinite alternate-reverse;
         
     /* shorthand
     animation: rotate-bl 1s linear 0s 1 normal none;*/
@@ -99,12 +80,45 @@ div.at-container {
 @keyframes rotate-bl {
         
     0% {
+        width: 50px;
+        height: 50px;
         transform:rotate(0);
         transform-origin:bottom left;
     }
+
+    50%{
+        width: 100px;
+        height: 100px;
+    }
     100% {
+        width: 150px;
+        height: 150px;
         transform:rotate(360deg);
         transform-origin:bottom left;
+        border-radius: 100px;
+        background-color:red;
+    }
+
+}
+@keyframes rotate-bl1 {
+        
+    0% {
+        width: 50px;
+        height: 50px;
+        transform:rotate(0);
+        transform-origin:bottom left;
+    }
+    50%{
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        transform:rotate(360deg);
+        transform-origin:bottom left;
+        border-radius: 100px;
+        background-color:red;
     }
 }
 .swing_scale_1{
@@ -134,4 +148,75 @@ div.at-container {
   95%,100%{
       -webkit-transform:scale(1);
   }
+}
+.ball{
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 80px;
+    width:80px;
+    height:80px;
+    background-color: rgb(0, 119, 255);
+    float:left;
+}
+.ball1{
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 80px;
+    width:80px;
+    height:80px;
+    background-color: rgb(188, 36, 36);
+    float:left;
+}
+
+.change{
+    animation: change 5s ease-in-out infinite alternate;
+}
+
+@keyframes change{
+    0%,
+    30%{
+        width:80px;
+        height:80px;
+        background-color: rgb(0, 119, 255);
+    }
+    31%,
+    80%{
+        width:185px;
+        height:185px;
+        border-radius: 185px;
+        background-color:  rgb(188, 36, 36);
+    }
+    81%,
+    100%{
+        width:375px;
+        height:375px;
+        border-radius: 375px;
+        background-color: rgb(0, 119, 255);
+    }
+}
+.change1{
+    animation: change1 5s ease-in-out infinite alternate;
+}
+
+@keyframes change1{
+    0%,
+    30%{
+        width:80px;
+        height:80px;
+        background-color: rgb(188, 36, 36);
+    }
+    31%,
+    80%{
+        width:185px;
+        height:185px;
+        border-radius: 185px;
+        background-color:  rgb(0, 119, 255);
+    }
+    81%,
+    100%{
+        width:375px;
+        height:375px;
+        border-radius: 375px;
+        background-color: rgb(188, 36, 36);
+    }
 }
