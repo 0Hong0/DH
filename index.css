@@ -1,0 +1,137 @@
+.container {
+    width: 100%;
+    height: 60vh;
+    background: #9edfe0;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+.photo-container {
+    position: relative;
+    top: 60px; 
+    left: 20px;
+  }
+.photo-cont-item {
+    display: flex;
+    width: calc(460px * 6); 
+    .photo-item {
+      width: 400px;
+      height: 300px;
+      margin-right: 60px;
+      margin-bottom: 60px;
+      border-radius: 16px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  
+ 
+.animation-1 {
+    animation: scroller 20s linear infinite;
+    display: flex;
+    width: calc(460px * 6);
+  }
+
+  
+
+@keyframes scroller {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX( calc(-460px * 3) );
+    }
+  }
+  
+  
+.square{
+    margin-top: 100px;
+    margin-left: 150px;
+    border-radius: 20px;
+    width:100px;
+    height:100px;
+    background-color: rgb(0, 119, 255);
+}
+
+.walk{
+    animation: walk 1s ease-in-out infinite;
+}
+
+@keyframes walk{
+    0%{
+        transform:rotate(0deg);
+    }
+
+    65%{
+        transform: rotate(85deg);
+    }
+
+    75%{
+        transform:rotate(90deg);
+    }
+
+    83%{
+        transform: rotate(88deg);
+    }
+    90%,
+    100%{
+        transform:rotate(90deg);
+    }
+}
+
+
+div.at-container {
+    margin-top: -15%;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.at-item {
+    width: 100px; height: 100px; background-color:rgb(0, 119, 255); 
+    border-radius: 20px;
+    animation:rotate-bl 2s ease-in-out infinite
+        
+    /* shorthand
+    animation: rotate-bl 1s linear 0s 1 normal none;*/
+}
+@keyframes rotate-bl {
+        
+    0% {
+        transform:rotate(0);
+        transform-origin:bottom left;
+    }
+    100% {
+        transform:rotate(360deg);
+        transform-origin:bottom left;
+    }
+}
+.swing_scale_1{
+    animation:swing_scale_1 3s ease-in-out infinite;
+}
+@keyframes swing_scale_1{
+  0% {
+    opacity: 0;
+    -webkit-transform:scale(0);
+  }
+  20%{
+    opacity:1;
+    -webkit-transform:scale(1.2);
+  }
+  35%{
+      -webkit-transform:scale(0.9);
+  }
+  50%{
+      -webkit-transform:scale(1.08);
+  }
+  65%{
+      -webkit-transform:scale(0.96);
+  }
+  80%{
+      -webkit-transform:scale(1.02);
+  }
+  95%,100%{
+      -webkit-transform:scale(1);
+  }
+}
